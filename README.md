@@ -51,7 +51,7 @@ matrix-effect.js: Efeito visual da Matrix no fundo.
 3. Divirta-se jogando!
 
 📖 Controles secretos
-Neo pode se teleportar apertando a tecla "F"
+Neo pode se teleportar ao pressionar a tecla "F"
 
 📝 Licença
 Este projeto é de uso livre para fins educacionais e recreativos. Sinta-se à vontade para modificar e compartilhar.
