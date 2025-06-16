@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Efeito Matrix de fundo -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Menu centralizado -->
+  <div id="header-menu">
+    <h1>Escape da Matrix</h1>
+    <div id="menu">
+      <button id="start" class="menu-btn">START</button>
+      <div id="difficulties" style="display:none;">
+        <button class="menu-btn" data-diff="easy">Fácil</button>
+        <button class="menu-btn" data-diff="medium">Médio</button>
+        <button class="menu-btn" data-diff="hard">Difícil</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Área do jogo -->
+  <div id="maze"></div>
+  <h2 id="status"></h2>
+  <button id="restart" style="display:none;">Jogar de novo</button>
+
+  <!-- Mensagem de vitória/derrota com efeito Matrix -->
+  <div id="big-message">
+    <canvas id="big-matrix"></canvas>
+    <span id="big-text"></span>
+  </div>
+
+  <script src="js/matrix-effect.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
