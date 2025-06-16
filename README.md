@@ -50,15 +50,8 @@ matrix-effect.js: Efeito visual da Matrix no fundo.
 2. Abra o arquivo index.html em qualquer navegador moderno.
 3. Divirta-se jogando!
 
-📖 Regras adicionais
-Neo pode se teleportar
-
-
-🖼️ Capturas de tela
-Tela inicial:
-<img alt="Tela inicial" src="https://via.placeholder.com/600x300?text=Tela+Inicial">
-Labirinto:
-<img alt="Labirinto" src="https://via.placeholder.com/600x300?text=Labirinto">
+📖 Controles secretos
+Neo pode se teleportar apertando a tecla "F"
 
 📝 Licença
 Este projeto é de uso livre para fins educacionais e recreativos. Sinta-se à vontade para modificar e compartilhar.
