@@ -171,3 +171,13 @@ body {
     font-size: 2em;
   }
 }
+/* Destaque para Matrix Vision */
+.matrix-vision .wall { 
+  opacity: 0.5;
+  border: 1px solid #0f0;
+}
+
+/* Agentes diferentes */
+.enemy-1 { background: #0f0; }  
+.enemy-2 { background: #f00; }  
+.enemy-3 { background: #00f; }  
