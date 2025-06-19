@@ -146,36 +146,39 @@ function sleep(ms) {
 async function enemyBacktrack() {
   if (!playing || enemyFrozen) return;
 
-  for (const enemy of enemyPos) {
+  // Movimenta TODOS os agentes em paralelo
+  await Promise.all(enemyPos.map(async (enemy) => {
     const visited = {};
     await moveEnemy(enemy, visited);
-  }
+  }));
 }
 
 async function moveEnemy(enemy, visited) {
-  if (enemy.x === playerPos.x && enemy.y === playerPos.y) {
-    gameOver();
-    return true;
-  }
   const key = `${enemy.x},${enemy.y}`;
-  if (visited[key]) return false;
+  if (visited[key]) return; // Evita loops
   visited[key] = true;
+
   const directions = [[0, -1], [1, 0], [0, 1], [-1, 0]];
+  
   for (const [dx, dy] of directions) {
-    const newX = enemy.x + dx, newY = enemy.y + dy;
-    if (
-      newX >= 0 && newX < size &&
-      newY >= 0 && newY < size &&
-      mazeData[newY][newX] === 0
-    ) {
+    const newX = enemy.x + dx;
+    const newY = enemy.y + dy;
+
+    if (newX >= 0 && newX < size && newY >= 0 && newY < size && mazeData[newY][newX] === 0) {
       enemy.x = newX;
       enemy.y = newY;
       renderMaze();
-      await sleep(100);
-      if (await moveEnemy(enemy, visited)) return true;
+      
+      // Verifica colisão com o jogador
+      if (enemy.x === playerPos.x && enemy.y === playerPos.y) {
+        gameOver();
+        return;
+      }
+
+      await sleep(100); // Delay entre movimentos
+      await moveEnemy(enemy, visited); // Continua a busca
     }
   }
-  return false;
 }
 
 // Verifica se o agente está perto do jogador
