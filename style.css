@@ -30,6 +30,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Botões do menu */
@@ -65,12 +67,14 @@ body {
 
 /* Células do labirinto */
 .cell {
-  width: 28px;
-  height: 28px;
+  width: 5vw; 
+  height: 5vw; 
+  max-width: 28px; 
+  max-height: 28px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 1.5vw; 
   color: #0f0;
   border-radius: 4px;
 }
@@ -102,6 +106,7 @@ body {
   text-align: center;
   color: #0ff;
   margin-top: 10px;
+  font-size: 1.2em; /* Ajusta tamanho do texto */
 }
 #restart {
   display: none;
@@ -133,6 +138,8 @@ body {
   justify-content: center;
   background: rgba(0,0,0,0.95);
   flex-direction: column;
+  text-align: center;
+  padding: 20px;
 }
 #big-matrix {
   position: absolute;
@@ -147,4 +154,20 @@ body {
   font-family: inherit;
   z-index: 12;
   text-shadow: 0 0 30px #0f0, 0 0 10px #fff;
+  max-width: 90%; /* Ajusta largura máxima para telas menores */
+  word-wrap: break-word; /* Quebra texto longo */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .menu-btn {
+    font-size: 1em;
+    padding: 10px 24px;
+  }
+  #status {
+    font-size: 1em;
+  }
+  #big-text {
+    font-size: 2em;
+  }
 }
