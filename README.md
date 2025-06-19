@@ -53,6 +53,13 @@ matrix-effect.js: Efeito visual da Matrix no fundo.
 📖 Regras adicionais
 Neo pode se teleportar
 
+
+🖼️ Capturas de tela
+Tela inicial:
+<img alt="Tela inicial" src="https://via.placeholder.com/600x300?text=Tela+Inicial">
+Labirinto:
+<img alt="Labirinto" src="https://via.placeholder.com/600x300?text=Labirinto">
+
 📝 Licença
 Este projeto é de uso livre para fins educacionais e recreativos. Sinta-se à vontade para modificar e compartilhar.
 
