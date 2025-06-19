@@ -51,7 +51,8 @@ matrix-effect.js: Efeito visual da Matrix no fundo.
 3. Divirta-se jogando!
 
 📖 Regras adicionais
-Neo pode se teleportar
+Neo pode se teleportar pressionando a tecla Q
+Neo pode eliminar o agente pressionando a tecla F
 
 
 🖼️ Capturas de tela
